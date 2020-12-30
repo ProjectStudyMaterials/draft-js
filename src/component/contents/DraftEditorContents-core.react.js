@@ -200,12 +200,13 @@ class DraftEditorContents extends React.Component<Props> {
       // List items are special snowflakes, since we handle nesting and
       // counters manually.
       if (Element === 'li') {
-        console.log('hi mom');
-        const blockData = block.getData();
-        console.log(blockData);
-        if (!blockData.has(LIST_BLOCK_TYPE_DATA_KEY)) {
-          blockData.set(LIST_BLOCK_TYPE_DATA_KEY, blockType);
-        }
+        // console.log('hi mom');
+        // const blockData = block.getData();
+        // console.log(blockData);
+        // if (!blockData.has(LIST_BLOCK_TYPE_DATA_KEY)) {
+        //   blockData.set(LIST_BLOCK_TYPE_DATA_KEY, blockType);
+        // }
+        console.log(blockType);
         const shouldResetCount =
           lastWrapperTemplate !== wrapperTemplate ||
           currentDepth === null ||
@@ -214,7 +215,8 @@ class DraftEditorContents extends React.Component<Props> {
         className = joinClasses(
           className,
           getListItemClasses(
-            blockData.get(LIST_BLOCK_TYPE_DATA_KEY),
+            // blockData.get(LIST_BLOCK_TYPE_DATA_KEY),
+            blockType,
             depth,
             shouldResetCount,
             direction,
