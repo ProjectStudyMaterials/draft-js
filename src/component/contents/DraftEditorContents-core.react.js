@@ -27,6 +27,7 @@ const joinClasses: (
   ...classes: Array<?string>
 ) => string = require('joinClasses');
 const nullthrows = require('nullthrows');
+export const LIST_BLOCK_TYPE_DATA_KEY = 'type';
 
 type Props = {
   blockRenderMap: DraftBlockRenderMap,
@@ -199,6 +200,10 @@ class DraftEditorContents extends React.Component<Props> {
       // List items are special snowflakes, since we handle nesting and
       // counters manually.
       if (Element === 'li') {
+        const blockData = block.getData();
+        if (!blockData.has(LIST_BLOCK_TYPE_DATA_KEY)) {
+          blockData.set(LIST_BLOCK_TYPE_DATA_KEY, blockType);
+        }
         const shouldResetCount =
           lastWrapperTemplate !== wrapperTemplate ||
           currentDepth === null ||
@@ -206,7 +211,12 @@ class DraftEditorContents extends React.Component<Props> {
           (depth < currentDepth && !alreadyEncounteredDepth.has(depth));
         className = joinClasses(
           className,
-          getListItemClasses(blockType, depth, shouldResetCount, direction),
+          getListItemClasses(
+            blockData.get(LIST_BLOCK_TYPE_DATA_KEY),
+            depth,
+            shouldResetCount,
+            direction,
+          ),
         );
       }
 
