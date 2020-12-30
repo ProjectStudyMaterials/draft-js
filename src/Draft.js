@@ -67,6 +67,7 @@ const DraftPublic = {
   genKey: generateRandomKey,
   getDefaultKeyBinding,
   getVisibleSelectionRect,
+  LIST_BLOCK_TYPE_DATA_KEY: DraftEditor.LIST_BLOCK_TYPE_DATA_KEY,
 };
 
 module.exports = DraftPublic;

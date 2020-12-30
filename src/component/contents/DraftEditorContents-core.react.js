@@ -291,4 +291,7 @@ class DraftEditorContents extends React.Component<Props> {
   }
 }
 
-module.exports = DraftEditorContents;
+module.exports = {
+  DraftEditorContents,
+  LIST_BLOCK_TYPE_DATA_KEY,
+};
