@@ -200,9 +200,9 @@ class DraftEditorContents extends React.Component<Props> {
       // List items are special snowflakes, since we handle nesting and
       // counters manually.
       if (Element === 'li') {
-        const blockData = block.getData();
+        let blockData = block.getData();
         if (!blockData.has(LIST_BLOCK_TYPE_DATA_KEY)) {
-          blockData.set(LIST_BLOCK_TYPE_DATA_KEY, blockType);
+          blockData = blockData.set(LIST_BLOCK_TYPE_DATA_KEY, blockType);
         }
         const shouldResetCount =
           lastWrapperTemplate !== wrapperTemplate ||
