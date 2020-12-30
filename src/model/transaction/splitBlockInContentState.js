@@ -21,6 +21,7 @@ const generateRandomKey = require('generateRandomKey');
 const Immutable = require('immutable');
 const invariant = require('invariant');
 const modifyBlockForContentState = require('modifyBlockForContentState');
+const LIST_BLOCK_TYPE_DATA_KEY = require('../../util/listBlockTypeDataKey');
 
 const {List, Map} = Immutable;
 
@@ -115,6 +116,23 @@ const splitBlockInContentState = (
   const keyBelow = generateRandomKey();
   const isExperimentalTreeBlock = blockToSplit instanceof ContentBlockNode;
 
+  // Only add a piece to the newly created blocks data if it falls under
+  // the special case created in DraftEditorContents
+  let newBlockBelowData: Map<any, any> = Map();
+  if (
+    ['ordered-list-item', 'unordered-list-item'].includes(
+      blockToSplit.getType(),
+    )
+  ) {
+    const blockAboveData = blockToSplit.getData();
+    if (blockAboveData.has(LIST_BLOCK_TYPE_DATA_KEY)) {
+      const renderedListType = blockAboveData.get(LIST_BLOCK_TYPE_DATA_KEY);
+      newBlockBelowData = newBlockBelowData.set(
+        LIST_BLOCK_TYPE_DATA_KEY,
+        renderedListType,
+      );
+    }
+  }
   const blockAbove = blockToSplit.merge({
     text: text.slice(0, offset),
     characterList: chars.slice(0, offset),
@@ -123,7 +141,7 @@ const splitBlockInContentState = (
     key: keyBelow,
     text: text.slice(offset),
     characterList: chars.slice(offset),
-    data: Map(),
+    data: newBlockBelowData,
   });
 
   const blocksBefore = blockMap.toSeq().takeUntil(v => v === blockToSplit);

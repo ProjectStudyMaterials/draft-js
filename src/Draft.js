@@ -36,6 +36,7 @@ const getDefaultKeyBinding = require('getDefaultKeyBinding');
 const getVisibleSelectionRect = require('getVisibleSelectionRect');
 
 const convertFromHTML = require('convertFromHTMLToContentBlocks');
+const LIST_BLOCK_TYPE_DATA_KEY = require('util/listBlockTypeDataKey');
 
 const DraftPublic = {
   Editor: DraftEditor,
@@ -67,6 +68,8 @@ const DraftPublic = {
   genKey: generateRandomKey,
   getDefaultKeyBinding,
   getVisibleSelectionRect,
+
+  LIST_BLOCK_TYPE_DATA_KEY,
 };
 
 module.exports = DraftPublic;
