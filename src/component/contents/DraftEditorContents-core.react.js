@@ -27,7 +27,7 @@ const joinClasses: (
   ...classes: Array<?string>
 ) => string = require('joinClasses');
 const nullthrows = require('nullthrows');
-export const LIST_BLOCK_TYPE_DATA_KEY = 'type';
+const LIST_BLOCK_TYPE_DATA_KEY = 'LIST_BLOCK_TYPE_DATA_KEY';
 
 type Props = {
   blockRenderMap: DraftBlockRenderMap,
@@ -200,7 +200,9 @@ class DraftEditorContents extends React.Component<Props> {
       // List items are special snowflakes, since we handle nesting and
       // counters manually.
       if (Element === 'li') {
+        console.log('hi mom');
         const blockData = block.getData();
+        console.log(blockData);
         if (!blockData.has(LIST_BLOCK_TYPE_DATA_KEY)) {
           blockData.set(LIST_BLOCK_TYPE_DATA_KEY, blockType);
         }
