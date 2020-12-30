@@ -27,7 +27,7 @@ const joinClasses: (
   ...classes: Array<?string>
 ) => string = require('joinClasses');
 const nullthrows = require('nullthrows');
-const LIST_BLOCK_TYPE_DATA_KEY = require('../../util/listBlockTypeDataKey');
+const LIST_BLOCK_TYPE_DATA_KEY = require('listBlockTypeDataKey');
 
 type Props = {
   blockRenderMap: DraftBlockRenderMap,

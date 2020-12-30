@@ -21,7 +21,7 @@ const generateRandomKey = require('generateRandomKey');
 const Immutable = require('immutable');
 const invariant = require('invariant');
 const modifyBlockForContentState = require('modifyBlockForContentState');
-const LIST_BLOCK_TYPE_DATA_KEY = require('../../util/listBlockTypeDataKey');
+const LIST_BLOCK_TYPE_DATA_KEY = require('listBlockTypeDataKey');
 
 const {List, Map} = Immutable;
 
