@@ -224,27 +224,27 @@
   counter-increment: ol4;
 }
 
-.public/DraftStyleDefault/orderedListItem:before {
+.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth5:before {
   content: counter(ol5) ". ";
   counter-increment: ol5;
 }
 
-.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth1:before {
+.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth6:before {
   content: counter(ol6,upper-roman) ". ";
   counter-increment: ol6;
 }
 
-.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth2:before {
+.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth7:before {
   content: counter(ol7,upper-alpha) ". ";
   counter-increment: ol7;
 }
 
-.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth3:before {
+.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth8:before {
   content: counter(ol8,lower-roman) ". ";
   counter-increment: ol8;
 }
 
-.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth4:before {
+.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth9:before {
   content: counter(ol9,lower-alpha) ". ";
   counter-increment: ol9;
 }
