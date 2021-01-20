@@ -205,23 +205,48 @@
 }
 
 .public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth1:before {
-  content: counter(ol1,lower-alpha) ". ";
+  content: counter(ol1,upper-roman) ". ";
   counter-increment: ol1;
 }
 
 .public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth2:before {
-  content: counter(ol2,lower-roman) ". ";
+  content: counter(ol2,upper-alpha) ". ";
   counter-increment: ol2;
 }
 
 .public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth3:before {
-  content: counter(ol3) ". ";
+  content: counter(ol3,lower-roman) ". ";
   counter-increment: ol3;
 }
 
 .public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth4:before {
   content: counter(ol4,lower-alpha) ". ";
   counter-increment: ol4;
+}
+
+.public/DraftStyleDefault/orderedListItem:before {
+  content: counter(ol5) ". ";
+  counter-increment: ol5;
+}
+
+.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth1:before {
+  content: counter(ol6,upper-roman) ". ";
+  counter-increment: ol6;
+}
+
+.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth2:before {
+  content: counter(ol7,upper-alpha) ". ";
+  counter-increment: ol7;
+}
+
+.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth3:before {
+  content: counter(ol8,lower-roman) ". ";
+  counter-increment: ol8;
+}
+
+.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/depth4:before {
+  content: counter(ol9,lower-alpha) ". ";
+  counter-increment: ol9;
 }
 
 .public/DraftStyleDefault/depth0.public/DraftStyleDefault/reset {
@@ -242,4 +267,24 @@
 
 .public/DraftStyleDefault/depth4.public/DraftStyleDefault/reset {
   counter-reset: ol4;
+}
+
+.public/DraftStyleDefault/depth5.public/DraftStyleDefault/reset {
+  counter-reset: ol5;
+}
+
+.public/DraftStyleDefault/depth6.public/DraftStyleDefault/reset {
+  counter-reset: ol6;
+}
+
+.public/DraftStyleDefault/depth7.public/DraftStyleDefault/reset {
+  counter-reset: ol7;
+}
+
+.public/DraftStyleDefault/depth8.public/DraftStyleDefault/reset {
+  counter-reset: ol8;
+}
+
+.public/DraftStyleDefault/depth9.public/DraftStyleDefault/reset {
+  counter-reset: ol9;
 }
