@@ -103,6 +103,56 @@
   margin-right: 7.5em;
 }
 
+/* @noflip */
+.public/DraftStyleDefault/depth5.public/DraftStyleDefault/listLTR {
+  margin-left: 9em;
+}
+
+/* @noflip */
+.public/DraftStyleDefault/depth5.public/DraftStyleDefault/listRTL {
+  margin-right: 9em;
+}
+
+/* @noflip */
+.public/DraftStyleDefault/depth6.public/DraftStyleDefault/listLTR {
+  margin-left: 10.5em;
+}
+
+/* @noflip */
+.public/DraftStyleDefault/depth6.public/DraftStyleDefault/listRTL {
+  margin-right: 10.5em;
+}
+
+/* @noflip */
+.public/DraftStyleDefault/depth7.public/DraftStyleDefault/listLTR {
+  margin-left: 12em;
+}
+
+/* @noflip */
+.public/DraftStyleDefault/depth7.public/DraftStyleDefault/listRTL {
+  margin-right: 12em;
+}
+
+/* @noflip */
+.public/DraftStyleDefault/depth8.public/DraftStyleDefault/listLTR {
+  margin-left: 13.5em;
+}
+
+/* @noflip */
+.public/DraftStyleDefault/depth8.public/DraftStyleDefault/listRTL {
+  margin-right: 13.5em;
+}
+
+/* @noflip */
+.public/DraftStyleDefault/depth9.public/DraftStyleDefault/listLTR {
+  margin-left: 15em;
+}
+
+/* @noflip */
+.public/DraftStyleDefault/depth9.public/DraftStyleDefault/listRTL {
+  margin-right: 15em;
+}
+
 /**
  * Only use `square` list-style after the first two levels.
  */

@@ -63,7 +63,12 @@ const getListItemClasses = (
     'public/DraftStyleDefault/depth1': depth === 1,
     'public/DraftStyleDefault/depth2': depth === 2,
     'public/DraftStyleDefault/depth3': depth === 3,
-    'public/DraftStyleDefault/depth4': depth >= 4,
+    'public/DraftStyleDefault/depth4': depth === 4,
+    'public/DraftStyleDefault/depth5': depth === 5,
+    'public/DraftStyleDefault/depth6': depth === 6,
+    'public/DraftStyleDefault/depth7': depth === 7,
+    'public/DraftStyleDefault/depth8': depth === 8,
+    'public/DraftStyleDefault/depth9': depth >= 9,
     'public/DraftStyleDefault/listLTR': direction === 'LTR',
     'public/DraftStyleDefault/listRTL': direction === 'RTL',
   });
