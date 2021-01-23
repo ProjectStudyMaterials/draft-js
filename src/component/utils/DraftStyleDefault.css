@@ -157,9 +157,11 @@
  * Ordered list item counters are managed with CSS, since all list nesting is
  * purely visual.
  */
-.public/DraftStyleDefault/orderedListItem, .public/DraftStyleDefault/unorderedListItem {
+.public/DraftStyleDefault/orderedListItem,
+.public/DraftStyleDefault/unorderedListItem {
   list-style-type: none;
   display: table;
+  width: 100%;
 }
 
 /* @noflip */
