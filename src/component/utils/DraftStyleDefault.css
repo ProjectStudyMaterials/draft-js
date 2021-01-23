@@ -55,143 +55,116 @@
 
 /* @noflip */
 .public/DraftStyleDefault/depth0.public/DraftStyleDefault/listLTR {
-  margin-left: 1.5em;
+  margin-left: 0;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth0.public/DraftStyleDefault/listRTL {
-  margin-right: 1.5em;
+  margin-right: 0;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth1.public/DraftStyleDefault/listLTR {
-  margin-left: 3em;
+  margin-left: 1.5em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth1.public/DraftStyleDefault/listRTL {
-  margin-right: 3em;
+  margin-right: 1.5em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth2.public/DraftStyleDefault/listLTR {
-  margin-left: 4.5em;
+  margin-left: 3em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth2.public/DraftStyleDefault/listRTL {
-  margin-right: 4.5em;
+  margin-right: 3em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth3.public/DraftStyleDefault/listLTR {
-  margin-left: 6em;
+  margin-left: 4.5em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth3.public/DraftStyleDefault/listRTL {
-  margin-right: 6em;
+  margin-right: 4.5em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth4.public/DraftStyleDefault/listLTR {
-  margin-left: 7.5em;
+  margin-left: 6em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth4.public/DraftStyleDefault/listRTL {
-  margin-right: 7.5em;
+  margin-right: 6em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth5.public/DraftStyleDefault/listLTR {
-  margin-left: 9em;
+  margin-left: 7.5em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth5.public/DraftStyleDefault/listRTL {
-  margin-right: 9em;
+  margin-right: 7.5em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth6.public/DraftStyleDefault/listLTR {
-  margin-left: 10.5em;
+  margin-left: 9em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth6.public/DraftStyleDefault/listRTL {
-  margin-right: 10.5em;
+  margin-right: 9em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth7.public/DraftStyleDefault/listLTR {
-  margin-left: 12em;
+  margin-left: 10.5em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth7.public/DraftStyleDefault/listRTL {
-  margin-right: 12em;
+  margin-right: 10.5em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth8.public/DraftStyleDefault/listLTR {
-  margin-left: 13.5em;
+  margin-left: 12em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth8.public/DraftStyleDefault/listRTL {
-  margin-right: 13.5em;
+  margin-right: 12em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth9.public/DraftStyleDefault/listLTR {
-  margin-left: 15em;
+  margin-left: 13.5em;
 }
 
 /* @noflip */
 .public/DraftStyleDefault/depth9.public/DraftStyleDefault/listRTL {
-  margin-right: 15em;
-}
-
-/**
- * Only use `square` list-style after the first two levels.
- */
-.public/DraftStyleDefault/unorderedListItem {
-  list-style-type: square;
-  position: relative;
-}
-
-.public/DraftStyleDefault/unorderedListItem.public/DraftStyleDefault/depth0 {
-  list-style-type: disc;
-}
-
-.public/DraftStyleDefault/unorderedListItem.public/DraftStyleDefault/depth1 {
-  list-style-type: circle;
+  margin-right: 13.5em;
 }
 
 /**
  * Ordered list item counters are managed with CSS, since all list nesting is
  * purely visual.
  */
-.public/DraftStyleDefault/orderedListItem {
+.public/DraftStyleDefault/orderedListItem, .public/DraftStyleDefault/unorderedListItem {
   list-style-type: none;
-  position: relative;
+  display: table;
 }
 
 /* @noflip */
-.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/listLTR:before {
-  left: -36px;
-  position: absolute;
-  text-align: right;
-  width: 30px;
-}
-
-/* @noflip */
-.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/listRTL:before {
-  position: absolute;
-  right: -36px;
-  text-align: left;
-  width: 30px;
+.public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/listLTR:before, .public/DraftStyleDefault/orderedListItem.public/DraftStyleDefault/listRTL:before {
+  display: table-cell;
 }
 
 /**
@@ -287,4 +260,19 @@
 
 .public/DraftStyleDefault/depth9.public/DraftStyleDefault/reset {
   counter-reset: ol9;
+}
+
+.public/DraftStyleDefault/unorderedListItem:before {
+  content: "\2022";
+  padding-right: 8px;
+}
+
+.public/DraftStyleDefault/unorderedListItem.public/DraftStyleDefault/depth1:before {
+  content: "\25E6";
+  padding-right: 8px;
+}
+
+.public/DraftStyleDefault/unorderedListItem.public/DraftStyleDefault/depth2:before {
+  content: "\2010";
+  padding-right: 8px;
 }
