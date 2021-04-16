@@ -40,7 +40,8 @@
   "dependencies": {
     "fbjs": "^2.0.0",
     "immutable": "~3.7.4",
-    "object-assign": "^4.1.1"
+    "object-assign": "^4.1.1",
+    "pnpapi": "^0.0.0"
   },
   "peerDependencies": {
     "react": ">=0.14.0",
