@@ -1,2 +1,3 @@
 #!/bin/bash
-./scripts/preCommit/protectDevAndMainBranches.sh || exit 1
+./scripts/preCommit/protectDevAndMainBranches.sh || exit "$?"
+yarn build || exit "$?"

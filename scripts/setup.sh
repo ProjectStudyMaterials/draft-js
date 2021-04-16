@@ -6,9 +6,5 @@ echo "Setting up pre-commit hooks for git..."
 cp "scripts/preCommit.sh" "$preCommitFile"
 echo "Setting up pre-commit hooks for git...done"
 
-# Install NodeJs
-read -p 'Install Nodejs? [y/N]: ' installNode
-if [ "${installNode,,}" = "y" ]
-then
-  sudo apt-get install nodejs
-fi
+# Intentionally not moving to yarn 2.0, maybe another time (stuff broke!)
+yarn install
