@@ -86,7 +86,7 @@
     "webpack-stream": "5.2.1"
   },
   "devEngines": {
-    "node": "10.x || 12.x || 13.x",
+    "node": "10.x || 12.x || 13.x || 14.x",
     "npm": "2.x || 3.x || 5.x || 6.x"
   },
   "jest": {
