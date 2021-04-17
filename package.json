@@ -20,6 +20,8 @@
   "repository": "facebook/draft-js",
   "license": "MIT",
   "scripts": {
+    "setup": "scripts/setup.sh",
+    "enforce-pre-commit": "scripts/enforcePreCommitSetup.sh",
     "prepare": "npm run build",
     "pretest": "node node_modules/fbjs-scripts/node/check-dev-engines.js package.json",
     "build": "gulp",
