@@ -8,33 +8,25 @@
     "react",
     "richtext"
   ],
-  "homepage": "http://draftjs.org/",
-  "bugs": "https://github.com/facebook/draft-js/issues",
   "files": [
     "dist/",
-    "lib/",
-    "LICENSE"
+    "lib/"
   ],
   "main": "lib/Draft.js",
   "style": "dist/Draft.css",
   "repository": "facebook/draft-js",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "setup": "scripts/setup.sh",
     "enforce-pre-commit": "scripts/enforcePreCommitSetup.sh",
-    "prepare": "npm run build",
+    "prepare": "yarn build",
     "pretest": "node node_modules/fbjs-scripts/node/check-dev-engines.js package.json",
     "build": "gulp",
     "dev": "gulp dev",
     "postbuild": "node node_modules/fbjs-scripts/node/check-lib-requires.js lib",
-    "lint": "eslint .",
-    "lint-docs": "alex . && yarn format-docs:diff",
-    "format": "eslint . --fix",
-    "format-docs": "prettier --config prettier.config.js --write \"docs/**/*.md\"",
-    "format-docs:diff": "prettier --config prettier.config.js --list-different \"docs/**/*.md\"",
     "flow": "flow src",
     "test": "cross-env NODE_ENV=test jest",
-    "test-ci": "cross-env NODE_ENV=test npm run lint && npm run flow && npm run test"
+    "test-ci": "cross-env NODE_ENV=test yarn run lint && yarn run flow && yarn run test"
   },
   "dependencies": {
     "fbjs": "^2.0.0",
@@ -55,14 +47,6 @@
     "cross-env": "^7.0.2",
     "del": "^5.1.0",
     "es6-shim": "^0.35.5",
-    "eslint": "^7.6.0",
-    "eslint-config-fbjs": "^3.1.1",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-babel": "^5.3.1",
-    "eslint-plugin-flowtype": "^5.2.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.5",
     "fbjs-scripts": "^2.0.0",
     "flow-bin": "^0.130.0",
     "gulp": "^4.0.2",
@@ -84,10 +68,6 @@
     "through2": "^4.0.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack-stream": "5.2.1"
-  },
-  "devEngines": {
-    "node": "10.x || 12.x || 13.x || 14.x",
-    "npm": "2.x || 3.x || 5.x || 6.x"
   },
   "jest": {
     "globals": {
