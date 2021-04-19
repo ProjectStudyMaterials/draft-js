@@ -19,14 +19,14 @@
   "scripts": {
     "setup": "scripts/setup.sh",
     "enforce-pre-commit": "scripts/enforcePreCommitSetup.sh",
-    "prepare": "npm run build",
+    "prepare": "yarn build",
     "pretest": "node node_modules/fbjs-scripts/node/check-dev-engines.js package.json",
     "build": "gulp",
     "dev": "gulp dev",
     "postbuild": "node node_modules/fbjs-scripts/node/check-lib-requires.js lib",
     "flow": "flow src",
     "test": "cross-env NODE_ENV=test jest",
-    "test-ci": "cross-env NODE_ENV=test npm run lint && npm run flow && npm run test"
+    "test-ci": "cross-env NODE_ENV=test yarn run lint && yarn run flow && yarn run test"
   },
   "dependencies": {
     "fbjs": "^2.0.0",
