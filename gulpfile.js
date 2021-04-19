@@ -273,9 +273,9 @@ gulp.task(
 gulp.task(
   'default',
   gulp.series(
-    'check-dependencies',
-    'clean',
-    gulp.parallel('modules', 'flow'),
+    // 'check-dependencies',
+    // 'clean',
+    // gulp.parallel('modules', 'flow'),
     gulp.parallel('dist', 'dist:min'),
   ),
 );
